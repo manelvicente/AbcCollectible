@@ -1,5 +1,5 @@
 AbcCollectible:
-Contracts Address: 0x50Df7F7CbdD33E3a02102Ad0dD4CA2D9917235d8
+Contracts Address: 0x50Df7F7CbdD33E3a02102Ad0dD4CA2D9917235d8 (goerli tesnet)
 
     - AbcCollectible is a type ERC721 (from OpenZepplin)
         - In order to able to create ABC collectibles
