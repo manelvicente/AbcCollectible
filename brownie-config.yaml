@@ -8,6 +8,7 @@ compiler:
       - "@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1"
 wallets:
   from_key: ${PRIVATE_KEY}
+  test_key: ${PRIVATE_KEY2}
   from_mnemonic: ${MNEMONIC}
 networks:
   default: development
