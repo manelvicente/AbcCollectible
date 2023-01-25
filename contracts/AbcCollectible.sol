@@ -14,7 +14,7 @@ contract AbcCollectible is ERC721, VRFConsumerBase, Ownable {
 
     mapping(address => uint8) private _owners; //Address is enabled or disabled (1 or 0)
 
-    uint256 constant MIN_SIGNATURES = 1;
+    uint256 constant MIN_SIGNATURES = 1; //minimum amount of signatures to verify transaction
     uint256 private _transactionIdx;
 
     /**
@@ -35,7 +35,7 @@ contract AbcCollectible is ERC721, VRFConsumerBase, Ownable {
     uint256[] private _pendingTransactions;
 
     /**
-     * @dev arrays to log relevant event
+     * @dev events to log relevant incidents
      */
     event DepositFunds(address from, uint256 amount);
     event TransactionCreated(
@@ -90,7 +90,7 @@ contract AbcCollectible is ERC721, VRFConsumerBase, Ownable {
     }
 
     /**
-     * @dev Creates a collectible using ChainlinkVRF as RNG
+     * @dev Initiates a collectible creation using ChainlinkVRF for RNG
      * @param tokenURI - Pointer to the collectibles metadata (JSON) *Could be an API call*
      * @return requestId - bytes32
      */
@@ -113,7 +113,7 @@ contract AbcCollectible is ERC721, VRFConsumerBase, Ownable {
     }
 
     /**
-     * @dev The oracle fulfills the RNG request and returns the generated number
+     * @dev The oracle fulfills the RNG request and mints collectible
      * @param requestId - Request Identifier associated with off-chain event
      * @param randomNumber - number given by the off-chain oracle
      */

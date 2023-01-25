@@ -23,5 +23,5 @@ def main():
     #transactionDeposit = abc_collectible.deposit({"value": 1000000000000000, "from": test})
     #print("Address {} deposited 1000000000000000 wei".format(test))
 
-    transactionDeposit = abc_collectible.withdrawTo(dev, 1, {"gas": "10000000000", "from": dev})
-    print("Address {} initiated a transaction to withdraw 1000000000000000 wei".format(dev))
+    #transactionDeposit = abc_collectible.withdrawTo(dev, 1, {"gas": "10000000000", "from": dev})
+    #print("Address {} initiated a transaction to withdraw 1000000000000000 wei".format(dev))
