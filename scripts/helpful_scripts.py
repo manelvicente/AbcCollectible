@@ -10,7 +10,7 @@ LOCAL_BLOCKCHAIN_ENVIRONMENTS = NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS + [
 ]
 
 def fund_with_link(
-    contract_address, link_token=None, amount=100000000000000000
+    contract_address, link_token=None, amount=1000000000000000000
 ):
     """
     Funding a given contract with LINK

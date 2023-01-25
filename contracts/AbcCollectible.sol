@@ -96,6 +96,7 @@ contract AbcCollectible is ERC721, VRFConsumerBase, Ownable {
      */
     function createCollectible(string memory tokenURI)
         public
+        payable
         returns (bytes32)
     {
         /**
@@ -103,6 +104,7 @@ contract AbcCollectible is ERC721, VRFConsumerBase, Ownable {
          * @param fee - Link token to fund RNG request
          * @param keyHash - Hash to verify numbers randomness
          */
+        require(msg.value >= 0.01 ether, "Not enough Ether sent");
         bytes32 requestId = requestRandomness(keyHash, fee);
         // Confirm that request made is correctly returned to sender
         requestIdToSender[requestId] = msg.sender;
