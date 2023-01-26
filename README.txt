@@ -28,5 +28,12 @@ create_abc.py/multiSigFunc.py:
 helpful_scripts.py: 
     - Auxiliary scripts
 
+Environment Variables:
+
+    - PRIVATE_KEY : developers key
+    - PRIVATE_KEY2 : test key
+    - WEB3_INFURA_PROJECT_ID : infura api key
+    - ETHERSCAN_TOKEN : etherscan api key
+
 
     
